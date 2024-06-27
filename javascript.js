@@ -147,33 +147,33 @@ function scrolling(){
     if (drugiScroll >= 1050) {
       $(portfolioH4).css({opacity: "0"+((drugiScroll-1049)/300)+"", visibility:"visible"})
     }
-    if (drugiScroll <= 2100) {
+    if (drugiScroll <= 1900) {
       $(portfolioH4).css({top: "43%"})
     }
-    if (drugiScroll >= 2100) {
+    if (drugiScroll >= 1900) {
       $(vLogo).css({top: "-120%"}),
       $( [mLogo, mLogoHidden] ).css({top: "120%"}),
-      $(portfolioH4).css({opacity: 1, top: 43-((drugiScroll-2099)/9.5)+"%"})
+      $(portfolioH4).css({opacity: 1, top: 43-((drugiScroll-1899)/9.5)+"%"})
     }
     //--------------------------- CONTACT SECTION ---------------------------
-    if(treciScroll <= 2220){
+    if(treciScroll <= 1900){
       $( [contactImg, contactH] ).css({opacity: "0"})
     }
-    if(treciScroll >= 2220){
-      $( [contactImg, contactH] ).css({opacity: "0"+((treciScroll-2220)/300)})
+    if(treciScroll >= 1900){
+      $( [contactImg, contactH] ).css({opacity: "0"+((treciScroll-1900)/300)})
     }
-    if(treciScroll >= 2600){
+    if(treciScroll >= 2300){
       $( [contactImg, contactH] ).css({opacity: "1"})
     }
-    if(treciScroll <= 2220){
+    if(treciScroll <= 1900){
       $(contactMedia).css({transform: 'translateX(-150%)',transition: 'transform 0.3s'})
       $(contactForm).css({transform: 'translateX(150%)',transition: 'transform 0.3s'})
     }
-    if(treciScroll >= 2220){
-      $(contactMedia).css({transform: 'translateX('+(-150+((treciScroll-2220)/2))+'%)',transition: 'transform 0.1s'})
-      $(contactForm).css({transform: 'translateX('+(150-((treciScroll-2220)/2))+'%)',transition: 'transform 0.1s'})
+    if(treciScroll >= 1900){
+      $(contactMedia).css({transform: 'translateX('+(-150+((treciScroll-1900)/2))+'%)',transition: 'transform 0.1s'})
+      $(contactForm).css({transform: 'translateX('+(150-((treciScroll-1900)/2))+'%)',transition: 'transform 0.1s'})
     }
-    if(treciScroll >= 2520){
+    if(treciScroll >= 2200){
       $( [contactMedia, contactForm] ).css({transform: 'translateX(0%)'})
     }
   }
@@ -341,14 +341,40 @@ $(closeMoreAbout).on("click", function(){
   $( [homePage, aboutPage, portfolioPage, menuIcon, contactSection] ).css({visibility:"visible", display:"block"})
 });
 // ====================================== OPEN PROJECT PREVEIW ==================================================
-$(".portSingleDiv").on("click", function(){
-  $( seeMorePage ).css({visibility: "visible",opacity: 1,transition: "visibility 0.5s, opacity 0.2s linear"})
-  $( body ).css({overflowY: "hidden"})
+$(document).ready(function(){
+  $.getJSON("projects.json", function(projects) {
+      $(".portSingleDiv").on("click", function(){
+          var projectId = $(this).find("img").attr("id");
+          var project = projects.find(p => p.id == projectId);
+
+          if(project) {
+              $("#seeMorePage #projectPhoto img").attr("src", project.image);
+              $("#seeMorePage #projectTitle h6").text(project.title);
+              $("#seeMorePage #projectDescript p").text(project.description);
+              
+              var skillsHtml = "";
+              project.skills.forEach(function(skill){
+                  skillsHtml += '<div class="skillSet"><p>' + skill + '</p></div>';
+              });
+              $("#seeMorePage #projectSkills").html(skillsHtml);
+
+              $("#seeMorePage #openProject a").attr("href", project.link);
+              $("#seeMorePage #dateCreated p").text(project.date);
+              $("#seeMorePage #projectCategory p").text(project.category);
+
+              $("#seeMorePage").css({visibility: "visible", opacity: 1, transition: "visibility 0.5s, opacity 0.2s linear"});
+              $("body").css({overflowY: "hidden"});
+          }
+      });
+
+      $("#closeMore").on("click", function(){
+          $("#seeMorePage").css({visibility: "hidden", opacity: 0, transition: "visibility 0.5s, opacity 0.2s linear"});
+          $("body").css({overflowY: "scroll"});
+      });
+  });
 });
-$(closeMore).on("click", function(){
-  $( seeMorePage ).css({visibility: "hidden",opacity: 0,transition: "visibility 0.5s, opacity 0.2s linear"})
-  $( body ).css({overflowY: "scroll"})
-});
+
+
 
 $(document).ready(function(){
   // ====================================== BURGERBAR Toggle ANIMACIJE ======================================
@@ -395,19 +421,12 @@ $(document).ready(function(){
     if(counter == 101) {
     clearInterval(i);
     }
-  }, 45); 
+  }, 15); 
   setTimeout(function(){
-    $(loader).css({opacity: 0,transition: "visibility 0.5s, opacity 0.2s linear"});}, 5000);
+    $(loader).css({opacity: 0,transition: "visibility 0.5s, opacity 0.2s linear"});}, 2000);
   setTimeout(function(){
-    $(loader).css({display:"none"});}, 5400);
+    $(loader).css({display:"none"});}, 2400);
   // ================================== SKROLNI NA LEVO PORTFOLIO PROJEKTE ===============================
-  var portfolioItems = document.querySelector('#portfolioItems')
-  var preScrollDiv = $(portfolioItems).width();
-  if(screen >= 800){
-    $(portfolioItems).scrollLeft((preScrollDiv/100)*13);
-  }else{
-    $(portfolioItems).scrollLeft(0);
-  }
 }); 
 
 
