@@ -1003,8 +1003,13 @@
         margin-left: 40px;
         margin-bottom: 30px;
     }
-    
-    #contactSocialMed p:hover {
+    #contactSocialMed a{
+        color: rgba(240, 240, 240, .55);
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    #contactSocialMed p:hover, #contactSocialMed a:hover {
         color: rgba(240, 240, 240, .80);
         transition: 0.3s;
     }
@@ -1132,7 +1137,7 @@
         font-weight: 400;
         letter-spacing: 1px;
         text-align: center;
-        padding-top: 10px;
+        padding-top: 15px;
         padding-bottom: 20px;
     }
     /* ============================================================================================================ */
