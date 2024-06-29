@@ -1,6 +1,6 @@
 [
     {
-        "id": 0,
+        "id": 1,
         "title": "REPLAY Pub Crawl",
         "description": "Replay Pub Crawl is an exciting venture for my additional business, offering a unique nightlife experience. This service organizes guided tours to top bars and pubs, ensuring an unforgettable night with exclusive drink deals. Additionally, it features an admin panel for managing bookings, staff, individual city websites, and detailed statistics.",
         "skills": ["#angularjs", "#mysql", "#expressjs", "#nodejs", "#vps", "#adminpanel"],
@@ -10,7 +10,7 @@
         "category": "Full Stack"
     },
     {
-        "id": 1,
+        "id": 2,
         "title": "Garage 46",
         "description": "LOGO is designed for a deep car cleaning service. The modern design with clean lines and appealing colors reflects the professionalism and commitment to providing top-notch vehicle cleaning services.",
         "skills": ["#illustrator", "#photoshop"],
@@ -20,7 +20,7 @@
         "category": "Logo Design"
     },
     {
-        "id": 2,
+        "id": 3,
         "title": "Multi-Factor Authentication",
         "description": "This is an application demonstrating multi-factor authentication ( Factors: username/pass, users device check, 6-digit code like totp ) with basic components needed for a single page application This application was created for the graduate work of my study. Next thing should be MFA2.0.",
         "skills": ["#mongodb", "#expressjs", "#angularjs", "#nodejs", "#photoshop", "#illustrator"],
@@ -30,7 +30,7 @@
         "category": "Full Stack"
     },
     {
-        "id": 3,
+        "id": 4,
         "title": "CV Design",
         "description": "This project involves the design of a personal CV that effectively showcases professional experience, skills, and achievements. The CV is crafted with a clean and modern layout, ensuring readability and aesthetic appeal. Key design elements include strategic use of color, typography, and spacing to highlight important information and create a strong first impression.",
         "skills": ["#photoshop", "#canva"],
@@ -40,17 +40,17 @@
         "category": "Design"
     },
     {
-        "id": 4,
+        "id": 5,
         "title": "ETH/Donuts Design",
         "description": "This NFT representing Ethereum and Donuts, created specifically for the Reddit community. The NFT is crafted to capture the essence of both the cryptocurrency and the Reddit culture, with vibrant colors and intricate details. These unique digital assets serve as a fun and engaging way to reward community members and celebrate the intersection of blockchain technology and social media.",
         "skills": ["#illustrator"],
-        "image": "media/portfolio/slika9.jpg",
+        "image": "media/portfolio/slika9.JPG",
         "link": "https://opensea.io/",
         "date": "8.4.2021.",
         "category": "NFT Design"
     },
     {
-        "id": 5,
+        "id": 6,
         "title": "HC Radio",
         "description": "HC Radio is a university project that focuses on creating an online radio station. The project involved developing a website that streams live music. The design and implementation include a responsive user interface to ensure accessibility across different devices. The project demonstrates proficiency in web design and multimedia streaming technologies.",
         "skills": ["#illustrator", "#photoshop", "#html", "#css", "#javascript"],
@@ -60,7 +60,7 @@
         "category": "Web Design"
     },
     {
-        "id": 6,
+        "id": 7,
         "title": "Holiday Hotels",
         "description": "Designing a UI/UX portfolio website for holiday hotels booking involves creating a visually appealing and user-friendly platform. The website focuses on providing seamless navigation and intuitive user experience for booking holiday accommodations.",
         "skills": ["#sketch", "#photoshop", "#ui-ux"],
@@ -70,7 +70,7 @@
         "category": "UI/UX Design"
     },
     {
-        "id": 7,
+        "id": 8,
         "title": "Website Design",
         "description": "This website is a university project that focuses on creating a simple html and css website.",
         "skills": ["#html", "#photoshop", "#css"],
@@ -80,7 +80,7 @@
         "category": "Website Design"
     },
     {
-        "id": 8,
+        "id": 9,
         "title": "Antique Shop",
         "description": "This website is a university project that focuses on creating a simple responsive website with shoping cart.",
         "skills": ["#html", "#photoshop", "#css", "#php"],
